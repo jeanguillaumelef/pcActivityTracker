@@ -1,30 +1,36 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿using System.Timers;
+using DomainLogic;
+using WinUser;
 
-class Program
+
+
+
+WindowInformation windowInformation = new WindowInformation();
+ActivityTracker tracker = new(windowInformation);
+// Initialize the timer
+var timer = new System.Timers.Timer();
+timer.Elapsed += WriteToFile;
+timer.Interval = 1000; // Set the interval to one minute (in milliseconds)
+timer.AutoReset = true; // Set to true for continuous execution
+
+// Start the timer
+timer.Start();
+
+Console.WriteLine("Press Enter to exit.");
+Console.ReadLine();
+
+// Stop the timer before exiting the application
+timer.Stop();
+
+//TODO should be a repo!
+void WriteToFile(object? sender, ElapsedEventArgs e)
 {
-    [DllImport("user32.dll")]
-    private static extern IntPtr GetForegroundWindow();
-
-    [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-    private static extern int GetWindowText(IntPtr hWnd, string lpString, int nMaxCount);
-
-    static void Main()
+    string filePath = "activity.txt";
+    using (StreamWriter writer = new StreamWriter(filePath, true))
     {
-        while (true)
-        {
-            IntPtr foregroundWindow = GetForegroundWindow();
-            const int maxPathSize = 256;
-            string windowTitle = new string(' ', maxPathSize);
-
-            GetWindowText(foregroundWindow, windowTitle, maxPathSize);
-            windowTitle = windowTitle.Split('\\').Last();
-
-            Console.WriteLine("Active Window: " + windowTitle);
-
-            // Sleep for a short interval
-            System.Threading.Thread.Sleep(1000);
-        }
+        var windowName = tracker.GetActivityName();
+        //TODO Write the current time to the file
+        writer.WriteLine(windowName);
     }
-}
+}    
 

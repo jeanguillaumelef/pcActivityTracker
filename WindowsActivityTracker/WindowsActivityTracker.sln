@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsActivityTracker", "WindowsActivityTracker\WindowsActivityTracker.csproj", "{0FD286FF-448B-429F-884A-31103CBA400B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsActivityTracker", "WindowsActivityTracker\WindowsActivityTracker.csproj", "{0FD286FF-448B-429F-884A-31103CBA400B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWindowsActivityTracker", "TestWindowsActivityTracker\TestWindowsActivityTracker.csproj", "{1A06AF5C-C5FD-462E-9907-87905E87B474}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestWindowsActivityTracker", "TestWindowsActivityTracker\TestWindowsActivityTracker.csproj", "{1A06AF5C-C5FD-462E-9907-87905E87B474}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinUser", "WinUser\WinUser.csproj", "{66AD9C84-E315-42FA-8FC0-1B12DCE85598}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainLogic", "DomainLogic\DomainLogic.csproj", "{D0BB06E9-0782-46F0-8BB9-AF7293CB2017}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{1A06AF5C-C5FD-462E-9907-87905E87B474}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A06AF5C-C5FD-462E-9907-87905E87B474}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A06AF5C-C5FD-462E-9907-87905E87B474}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66AD9C84-E315-42FA-8FC0-1B12DCE85598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66AD9C84-E315-42FA-8FC0-1B12DCE85598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66AD9C84-E315-42FA-8FC0-1B12DCE85598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66AD9C84-E315-42FA-8FC0-1B12DCE85598}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0BB06E9-0782-46F0-8BB9-AF7293CB2017}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0BB06E9-0782-46F0-8BB9-AF7293CB2017}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0BB06E9-0782-46F0-8BB9-AF7293CB2017}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0BB06E9-0782-46F0-8BB9-AF7293CB2017}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
